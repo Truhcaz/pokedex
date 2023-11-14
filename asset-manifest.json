@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pokedex/static/css/main.1c3f36ab.css",
+    "main.js": "/pokedex/static/js/main.5ca7e70e.js",
+    "static/media/tag.svg": "/pokedex/static/media/tag.cf550251bb199ebb71d843f3b790e787.svg",
+    "static/media/weight.svg": "/pokedex/static/media/weight.50d8414e98473dc04ee35afa6c3407c3.svg",
+    "static/media/sort.svg": "/pokedex/static/media/sort.27cb8c0c3b555ca55abea593f6575da2.svg",
+    "static/media/pokeball.svg": "/pokedex/static/media/pokeball.8532c13ef02d65f8947cbb898dd4b3c9.svg",
+    "static/media/text_format.svg": "/pokedex/static/media/text_format.432a377b38ebcd5b7d09c3f88d9a7a2f.svg",
+    "static/media/search.svg": "/pokedex/static/media/search.b58d3f742f144a88bae199a413aee174.svg",
+    "static/media/arrow_back.svg": "/pokedex/static/media/arrow_back.bb2bd5097b3077b354d340959e60e7cd.svg",
+    "static/media/chevron_right.svg": "/pokedex/static/media/chevron_right.a7316920c08849a54414fee3e58c68d1.svg",
+    "static/media/chevron_left.svg": "/pokedex/static/media/chevron_left.f8ec3bbfa389c2e60b963c4fbfc066f1.svg",
+    "index.html": "/pokedex/index.html",
+    "static/media/straighten.svg": "/pokedex/static/media/straighten.8c4fc021bc328f45e2bcd7c6e7ee80d4.svg",
+    "main.1c3f36ab.css.map": "/pokedex/static/css/main.1c3f36ab.css.map",
+    "main.5ca7e70e.js.map": "/pokedex/static/js/main.5ca7e70e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c3f36ab.css",
+    "static/js/main.5ca7e70e.js"
+  ]
+}
