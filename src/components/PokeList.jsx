@@ -50,7 +50,7 @@ const PokeList = ({ pokemons }) => {
   return (
     <StyledPokeList>
       <div className="container">
-        {pokemons.length !== 0 ? (
+        {pokemons.length === 493 ? (
           pokemons.map((pokemon, index) => {
             return (
               <PokeCard
@@ -67,7 +67,7 @@ const PokeList = ({ pokemons }) => {
             );
           })
         ) : (
-          <h1>No Pokemon Found</h1>
+          <h1>Waiting for pokemons...</h1>
         )}
       </div>
       {popupState ? (
