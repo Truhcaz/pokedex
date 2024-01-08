@@ -8,12 +8,19 @@ const StyledSearchBar = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  @media (max-width: 400px) {
+      gap: 10px;
+    }
   .search-container {
     position: relative;
     width: 400px;
     display: flex;
     border-radius: 40px;
     background-color: var(--white);
+    
+    @media (max-width: 650px) {
+      width: 200px;
+    }
   }
   .search-bar {
     width: 100%;

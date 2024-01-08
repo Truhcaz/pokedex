@@ -31,7 +31,6 @@ const StyledDetails = styled.div`
       var(--white) 70%,
       var(--${(props) => props.firstType}) 30%
     );
-    width: 600px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
     gap: 0;
     border-radius: 10px;
@@ -67,6 +66,10 @@ const StyledDetails = styled.div`
     width: 200px;
     height: 200px;
     z-index: 3;
+    @media (max-width: 500px) {
+      width: 150px;
+      left: 25%;
+    }
   }
 
   .btn {
@@ -99,6 +102,21 @@ const StyledDetails = styled.div`
   }
   #second-type {
     background-color: var(--${(props) => props.secondType});
+  }
+
+  @media (max-width: 800px) {
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    * {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 400px) {
+    * {
+      font-size: 10px;
+    }
   }
 `;
 

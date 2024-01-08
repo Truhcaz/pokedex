@@ -1,22 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 import PokeImage from "./PokeImage";
-import axios from "axios";
 
 const StyledCard = styled.div`
+  cursor: pointer;
+  width: 250px;
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
+
   img {
     width: 144px;
     height: 144px;
     position: absolute;
-    left: 50%;
     top: 50%;
-    margin-left: -70px;
-    margin-top: -80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 650px) {
+      width: 100px;
+      height: 100px;
+    }
   }
   p {
     padding: 16px;
     line-height: 16px;
     font-size: 20px;
+    @media (max-width: 650px) {
+      font-size:14px;
+      padding: 8px;
+      line-height: 8px;
+    }
   }
   #number {
     display: flex;
@@ -31,7 +44,7 @@ const StyledCard = styled.div`
 `;
 const Card = styled.div`
     display: flex;
-    width: 250px;
+    width: 100%;
     height: 250px;
     flex-direction: column;
     justify-content: space-between;
@@ -44,6 +57,9 @@ const Card = styled.div`
       var(--white) 60%,
       var(--${props => props.type }) 40%
     );
+    @media (max-width: 650px) {
+      height: 170px;
+    }
   `
 
 

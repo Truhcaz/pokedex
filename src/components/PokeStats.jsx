@@ -6,6 +6,7 @@ const StyledStats = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 20px 20px;
+  width: 100%;
 .stat-name {
     display: flex;
     flex-direction: column;
@@ -23,13 +24,16 @@ const StyledStats = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 100%;
   }
   .stat-percent {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    width: 200px;
-  }
+    width: 100%;
+    @media (max-width: 800px) {
+      gap: 15px;
+    }  }
 
   .progress-bar {
     background-color: #b6b6b6b6;

@@ -7,8 +7,7 @@ import styled from "styled-components";
 const StyledFilter = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   background-color: ${props => props.active === 'true' ? '#fff' : ''};
   border-radius: 50px;
   padding: 3px 10px;
@@ -37,6 +36,10 @@ const StyledFilter = styled.div`
     padding-top: 2px;
     width: 28px;
     height: 28px;
+    @media (max-width: 400px) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
 `;

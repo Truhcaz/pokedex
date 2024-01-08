@@ -4,8 +4,7 @@ import Header from './components/Header';
 import PokeList from './components/PokeList';
 import axios from 'axios';
 import Footer from './components/Footer';
-
-const API_URL = 'https://pokeapi.co/api/v2/pokemon/'
+import Loading from './components/Loading';
 
 function App() {
 
@@ -14,17 +13,20 @@ function App() {
   const [filter, setFilter] = useState('');
   const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {
+  async function fetchData() {
     const newPokemonsArray = [];
-    for (let i = 1; i <= 493; i++) {
-      axios.get(API_URL + i)
-        .then(res => {
-          newPokemonsArray.push(res.data)
-          setPokemons(newPokemonsArray)
-          setLoading(false);
-        })
-        .catch(err => console.log(err))
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const results = response?.data?.results || []
+
+    for (let i = 0; i < results.length; i++){
+      const pokemon = await axios.get(results[i].url);
+      newPokemonsArray.push(pokemon.data)
+      setPokemons(newPokemonsArray)
     }
+    setLoading(false);
+}
+  useEffect(()=> {
+    fetchData()
   }, [])
 
   const onSearchChange = (event) => {
@@ -47,7 +49,7 @@ function App() {
       <Header filter={filter} onSearchChange={onSearchChange} onFilterChange={onFilterChange}></Header>
       {
         (isLoading) ?
-          <h1>Loading in App...</h1>
+          <Loading/>
           :
           <PokeList pokemons={filter==='text'? filteredPokemons.sort(sortByName) : filteredPokemons}></PokeList>
       }
